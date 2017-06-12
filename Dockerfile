@@ -18,7 +18,7 @@ RUN mkdir -p /opt/resource/git && mkdir -p /var/cache/git && \
     sed -i '/lfs/s/^/# /' /opt/resource/git/in
 
 # Install SBT
-ENV SBT_VERSION 0.13.11
+ENV SBT_VERSION 0.13.13
 ADD sbt.sh /usr/local/bin/sbt
 RUN curl -sL "https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/${SBT_VERSION}/sbt-launch.jar" \
         > /usr/local/bin/sbt-launch.jar \
