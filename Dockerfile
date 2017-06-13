@@ -15,6 +15,7 @@ RUN mkdir -p /opt/resource/git && mkdir -p /var/cache/git && \
     unzip /opt/resource/git/git-resource.zip -d /opt/resource/git && \
     mv /opt/resource/git/git-resource-master/assets/* /opt/resource/git && \
     rm -r /opt/resource/git/git-resource.zip /opt/resource/git/git-resource-master && \
+    sed -i '/lfs/s/true/false/' /opt/resource/git/in && \
     cat /opt/resource/git/in
 
 # Install SBT
